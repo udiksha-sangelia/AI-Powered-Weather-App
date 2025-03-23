@@ -18,17 +18,17 @@ The **AI-Powered Weather App** provides real-time weather updates and predicts f
 
 ## Backend Setup
 **cd backend**
-**npm install**
-**node server.js**
+- **npm install**
+- **node server.js**
 
 ## Create a .env file and add
-**MONGO_URI=your_mongodb_connection_string**
-**OPENWEATHER_API_KEY=your_api_key**
+- **MONGO_URI=your_mongodb_connection_string**
+- **OPENWEATHER_API_KEY=your_api_key**
 
 ##  Frontend Setup
-**cd frontend**
-**npm install**
-**npm start**
+- **cd frontend**
+- **npm install**
+- **npm start**
 
 
 ## Let me know if you want modifications! 🚀
