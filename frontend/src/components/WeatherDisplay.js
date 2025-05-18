@@ -9,6 +9,8 @@ const WeatherDisplay = ({ setWeatherData }) => {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
 
+    const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
+
     console.log("Weather state before rendering:", weather);
     const getWeatherEmoji = (description) => {
         if (!description || typeof description !== "string") return "🌍";
@@ -32,13 +34,13 @@ const WeatherDisplay = ({ setWeatherData }) => {
             console.log("Fetching weather for:", city);
             setWeather(null);
             // Fetch current weather
-            const response = await axios.get(`http://localhost:5000/api/weather/current/${encodeURIComponent(city)}`);
+            const response = await axios.get(`${API_BASE_URL}/api/weather/current/${encodeURIComponent(city)}`);
             console.log("Weather Data:", response.data);
             setWeather(response.data || null);
             if (setWeatherData) setWeatherData(response.data);
 
             // Fetch weather prediction
-            const predictionResponse = await axios.get(`http://localhost:5000/api/weather/predict/${encodeURIComponent(city)}`);
+            const predictionResponse = await axios.get(`${API_BASE_URL}/api/weather/predict/${encodeURIComponent(city)}`);
             console.log("Prediction Data:", predictionResponse.data);
 
             if (predictionResponse.data && predictionResponse.data.prediction) {
