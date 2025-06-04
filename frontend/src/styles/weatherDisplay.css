@@ -2,14 +2,28 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: radial-gradient( circle 232px at 10% 20%,  rgba(251,238,115,0.74) 0%, rgba(241,195,87,0.74) 90% );
     min-height: 100vh;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(83,113,245,1) 0%, rgba(107,228,184,1) 72.3% );
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .weather-container {
     text-align: center;
     font-family: Arial, sans-serif;
-    background-image: linear-gradient( 86.9deg,  rgba(253,189,38,1) 28.3%, rgba(253,109,38,1) 118.2% );
+    background-image: linear-gradient( 89.5deg,  rgba(131,204,255,1) 0.4%, rgba(66,144,251,1) 100.3% );
     padding: 30px 40px;
     border-radius: 10px;
     width: 100%;
