@@ -64,6 +64,7 @@ const WeatherDisplay = ({ setWeatherData }) => {
 
 
     return (
+    <div className='container'>
         <div className='weather-container'>
             <h1>AI Weather App</h1>
             <input 
@@ -100,6 +101,7 @@ const WeatherDisplay = ({ setWeatherData }) => {
                 <p>Prediction not available...</p>
             )}
         </div>
+    </div>
     );
 }
 
