@@ -74,11 +74,11 @@ const WeatherDisplay = ({ setWeatherData }) => {
                 placeholder="Enter city" 
                 className="weather-input"
             />
-            <button onClick={fetchWeather} className="weather-button">Get Weather
-                {loading && <p>Loading...</p>}
-                {error && <p className="error">{error}</p>}
-            </button>
-
+            <button onClick={fetchWeather} className="weather-button">Get Weather</button>
+            
+            {loading && <p>Loading...</p>}
+            {error && <p className="error">{error}</p>}
+            
             {weather && weather.city ? (
                 <div className="weather-details">
                     <h2>{weather.city || "Unknown Location"}</h2>
